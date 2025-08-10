@@ -3,7 +3,7 @@ interface ContactFormData {
   email: string;
   message: string;
 }
-const Server = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const Server = import.meta.env.VITE_API_URL;
 
 export const sendContactForm = async (data: ContactFormData) => {
   const response = await fetch(`${Server}/api/contact`, {
